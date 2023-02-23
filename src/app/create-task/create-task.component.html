@@ -1,0 +1,28 @@
+<div align="center">
+    <hr>
+    <h4>Create Task Window</h4>
+    <hr>
+    <table border="1" cellpadding="10" cellspacing=20>
+        <tbody>
+            <tr>
+                <td>
+                    <form align="center" class="createtask-form" [formGroup]="createtaskForm" (ngSubmit)="createtask()">
+                        Task Name:
+                        <p> <input type="text" required=true formControlName="taskName"> </p>
+                        Task Description:
+                        <p><input type="text" required=true formControlName="taskDescription"> </p>
+                        Task Date:
+                        <p><input type="date" required=true formControlName="taskDate"></p>
+                        Created By:
+                        <p><input type="number" required=true formControlName="createdBy"></p>
+                        <p>
+                            <button type="submit" class="btn btn-sucess"> Submit </button>
+                            &nbsp;&nbsp;
+                            <button type="reset" class="btn btn-danger"> Reset </button>
+                        </p>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>  
+</div>

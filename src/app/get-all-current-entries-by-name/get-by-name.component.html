@@ -1,0 +1,33 @@
+<!-- Table-->
+<div align="center">
+    <hr>
+    <h4>Task Details</h4>
+    <hr>
+    <table border="1" cellpadding="10" cellspacing="1">
+        <thead>
+            <tr>
+                <th scope="col"> Task Name </th>
+                <th scope="col"> Task Description </th>
+                <th scope="col"> Task Date </th>
+                <th scope="col"> Created By </th>
+                <th scope="col"> Created Ts </th>
+                <th scope="col"> Updated By </th>
+                <th scope="col"> Updated Ts</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let entriesDetails of entriesDetailsList">
+                <td>{{entriesDetails.taskName}}</td>
+                <td>{{entriesDetails.taskDescription}}</td>
+                <td>{{entriesDetails.taskDate}}</td>
+                <td>{{entriesDetails.createdBy}}</td>
+                <td>{{entriesDetails.createdTs}}</td>
+                <td>{{entriesDetails.updatedBy}}</td>
+                <td>{{entriesDetails.updatedTs}}</td>
+               
+            </tr>
+        </tbody>
+    </table>
+    <br />
+    
+</div>

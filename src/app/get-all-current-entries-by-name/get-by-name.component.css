@@ -1,0 +1,17 @@
+h2{
+    color:black
+}
+
+h4{
+    color:black
+}
+
+button.btn.btn-sucess{
+    border-color: whitesmoke ;
+    border: 2;
+    background-color:yellowgreen;
+}
+
+thead {
+    background-color:whitesmoke;
+}

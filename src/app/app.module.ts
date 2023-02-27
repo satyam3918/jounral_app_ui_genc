@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 
 import { JounralAppDashboardComponent } from './jounral-app-dashboard/jounral-app-dashboard.component';
 import { CreateTaskComponent } from './create-task/create-task.component';
+import { GetAllCurrentEntries } from './get-all-current-entries/get-all-current-entries.component';
+import { GetbyNameComponent } from './get-all-current-entries-by-name/get-by-name.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,6 +21,8 @@ import { CommonModule } from '@angular/common';
     AppComponent,
     JounralAppDashboardComponent,
     CreateTaskComponent,
+    GetAllCurrentEntries,
+    GetbyNameComponent,
   ],
   imports: [
     BrowserModule,

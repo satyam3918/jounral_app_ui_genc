@@ -42,11 +42,11 @@ export class CreateTaskComponent implements OnInit {
     this.apiService.createTask(this.createtaskForm.value).subscribe(
       (response: any) => {
         this.showSuccess();
-        window.location.reload();
+        // window.location.reload();
       },
       (error) => {
         this.showError();
-        window.location.reload();
+        // window.location.reload();
       }
     );
 

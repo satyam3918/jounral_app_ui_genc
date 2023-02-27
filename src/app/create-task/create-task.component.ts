@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { ApiService } from '../service/api.service';
@@ -16,8 +16,9 @@ import { ApiService } from '../service/api.service';
 export class CreateTaskComponent implements OnInit {
 
   constructor(private router: Router, private httpClient: HttpClient,
-    private apiService: ApiService, private toastr: ToastrService) {
+    private apiService: ApiService, private toastr: ToastrService, private formBuilder: FormBuilder) {
   }
+
 
   ngOnInit() {
   }
@@ -29,6 +30,14 @@ export class CreateTaskComponent implements OnInit {
     createdBy: new FormControl(null, Validators.required)  
   });
 
+
+
+//   myForm() {
+//     this.createtaskForm = this.fb.group({
+//     taskName: ['', Validators.required ]
+//     });
+//  }
+   
   createtask() {
     this.apiService.createTask(this.createtaskForm.value).subscribe(
       (response: any) => {
@@ -40,7 +49,27 @@ export class CreateTaskComponent implements OnInit {
         window.location.reload();
       }
     );
+
+    
+    if(this.createtaskForm.valid){
+      console.log('task created created sucessfully')
+    }
+    else{
+      this.createtaskForm = this.formBuilder.group({
+        taskName: [null, Validators.required],
+        taskDescription: [null, Validators.required],
+        createdBy: [null, Validators.required]
+      });
+    }
   }
+
+  // onSubmit() {
+  //   if (this.createtaskForm.valid) {
+  //     console.log('form submitted');
+  //   } else {
+  //     // validate all form fields
+  //   }
+  // }
 
   showSuccess() {
     this.toastr.success('Task Created Successfully!');
@@ -49,5 +78,7 @@ export class CreateTaskComponent implements OnInit {
   showError() {
     this.toastr.error('Something went wrong while registration!')
   }
+
+
 
 }

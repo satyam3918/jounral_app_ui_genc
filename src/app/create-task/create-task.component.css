@@ -1,15 +1,15 @@
 h2{
-    color:yellowgreen
+    color:gray
 }
 
 h4{
-    color:yellowgreen
+    color:gray
 }
 
 button.btn.btn-sucess{
     border-color: whitesmoke ;
     border: 2;
-    background-color:black;
+    background-color:grey;
 }
 
 thead {

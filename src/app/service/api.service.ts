@@ -23,6 +23,7 @@ export class ApiService {
   createtaskUrl = 'http://localhost:8080/api/v1/addEntry';
   fetchtaskUrl =  'http://localhost:8080/api/v1/getAllCurrentEntries';
   fetchcurrenttaskUrl = 'http://localhost:8080/api/v1/getAllCurrentEntriesWithTaskName/';
+  fetchhistorytaskUrl = 'http://localhost:8080/api/v1/getAllMonthEntries/'
 
 
 
@@ -53,6 +54,10 @@ export class ApiService {
 
   getAllCurrentTasksWithName(taskName: any) {
      return this.httpClient.get(this.fetchcurrenttaskUrl + taskName);
+  }
+
+  getAllMonthEntriesWithMonthName(monthName: any){
+    return this.httpClient.get(this.fetchhistorytaskUrl + monthName);
   }
  
 

@@ -7,9 +7,9 @@
 
               <button class="btn btn-sucess" (click)="createtask()"> Create Task</button>
               &nbsp;&nbsp;
-              <button class="btn btn-sucess" (click)="listAll()"> List All Entries </button>
+              <button class="btn btn-sucess" (click)="listAll()"> Current Month Entries </button>
               &nbsp;&nbsp;
-              <button class="btn btn-sucess" >Month Drop Down</button>
+              <button class="btn btn-sucess" (click)="otherMonthEntries()" >Other Month Entries</button>
               
               <!-- <form name="task-search-form" [formGroup]="tasksearchForm" (ngSubmit)="search()">
                   <input type="text" required=true formControlName="taskName"> &nbsp;

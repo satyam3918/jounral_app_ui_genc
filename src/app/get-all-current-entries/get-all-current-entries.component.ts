@@ -43,9 +43,10 @@ import { ToastrService } from 'ngx-toastr';
         // });
         // return this.apiService.getAllCurrentTasksWithName(this.taskName).subscribe((response: any) => {
  
-        this.entriesDetailsListByName.push(this.taskName);
+            this.router.navigateByUrl('getAllCurrentEntriesWithName/' + this.taskName.taskName);
+        // this.entriesDetailsListByName.push(this.taskName);
 
-            return this.entriesDetailsListByName;
+        //     return this.entriesDetailsListByName;
         //   this.taskDetails.taskName = response.taskName;
         //   this.taskDetails.taskDescription = response.taskDescription;
         //   this.taskDetails.taskDate = response.taskDate;

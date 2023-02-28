@@ -1,0 +1,45 @@
+<div class="divider_history_top"></div>
+<div class="container-fluid">
+    <div class="row mt-3 justify-content-between history-header" >
+      <span class="historyheader">History</span>
+    </div>
+</div>
+  <div class="divider_history_end"></div>
+<div class="container-fluid">
+    
+
+  <div  id="runhistDropDown">
+    <div id="show">
+      Show
+    </div>
+
+      
+        <select [(ngModel)]="monthName" >
+          <option [ngValue]= item *ngFor="let item of LastMonths">
+            {{item|titlecase}}
+          </option>
+        </select>
+      
+      <div id="update-btn">
+        <input id="submit" type="submit" value="Update" class="update-button" (click)="showHistory()"> 
+      </div>
+    </div>
+  </div>
+ 
+white_check_mark
+eyes
+blob-cheer
+
+
+
+
+
+
+
+
+
+
+
+
+
+

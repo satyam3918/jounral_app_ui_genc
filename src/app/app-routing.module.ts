@@ -4,13 +4,15 @@ import { JounralAppDashboardComponent } from './jounral-app-dashboard/jounral-ap
 import { CreateTaskComponent } from './create-task/create-task.component';
 import { GetAllCurrentEntries } from './get-all-current-entries/get-all-current-entries.component';
 import { GetbyNameComponent } from './get-all-current-entries-by-name/get-by-name.component';
+import { HistoryTasks } from './get-other-month-entries/history.component';
 
 
 const routes: Routes = [
   { path: '', component: JounralAppDashboardComponent },
   { path: 'createtask', component: CreateTaskComponent},
   { path: 'getAllCurrentEntries', component: GetAllCurrentEntries},
-  { path: 'getAllCurrentEntriesWithName/:taskName', component: GetbyNameComponent }
+  { path: 'getAllCurrentEntriesWithName/:taskName', component: GetbyNameComponent },
+  { path: 'getAllMonthEntriesWithMonthName/:monthName', component: HistoryTasks }
 ];
 
 

@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
     this.router.navigateByUrl('getAllCurrentEntries');
   }
 
-  search() {
+  otherMonthEntries() {
     this.router.navigateByUrl('getAllCurrentEntriesWithName/' + this.tasksearchForm.value);
     this.tasksearchForm.reset();
     // this.appComponentForm.reset();]

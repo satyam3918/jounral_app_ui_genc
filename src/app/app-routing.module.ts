@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'createtask', component: CreateTaskComponent},
   { path: 'getAllCurrentEntries', component: GetAllCurrentEntries},
   { path: 'getAllCurrentEntriesWithName/:taskName', component: GetbyNameComponent },
-  { path: 'getAllMonthEntriesWithMonthName/:monthName', component: HistoryTasks }
+  { path: 'getAllMonthEntriesWithMonthName', component: HistoryTasks }
 ];
 
 

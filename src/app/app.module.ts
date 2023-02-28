@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
+import { HistoryTasks } from './get-other-month-entries/history.component';
 
 
 
@@ -23,6 +24,7 @@ import { CommonModule } from '@angular/common';
     CreateTaskComponent,
     GetAllCurrentEntries,
     GetbyNameComponent,
+    HistoryTasks
   ],
   imports: [
     BrowserModule,

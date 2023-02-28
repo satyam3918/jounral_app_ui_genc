@@ -1,4 +1,4 @@
-<div class="divider_history_top"></div>
+<!-- <div class="divider_history_top"></div>
 <div class="container-fluid">
     <div class="row mt-3 justify-content-between history-header" >
       <span class="historyheader">History</span>
@@ -7,11 +7,6 @@
   <div class="divider_history_end"></div>
 <div class="container-fluid">
     
-
-  <div  id="runhistDropDown">
-    <div id="show">
-      Show
-    </div>
 
       
         <select [(ngModel)]="monthName" >
@@ -29,17 +24,43 @@
 white_check_mark
 eyes
 blob-cheer
+ -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+ <div align="center">
+    <hr>
+    <h4>All Entries Details</h4>
+    <select  [(ngModel)]="monthName" >
+        <option [ngValue]=item *ngFor="let item of LastMonths">{{item|titlecase}}</option>
+    </select>&nbsp;&nbsp;<button type="submit" class="btn btn-sucess" (click)="showHistory()"> Search </button>&nbsp;&nbsp;
+    <!-- <form name="task-search-form" [formGroup]="tasksearchForm" (ngSubmit)="search()">
+        <input type="text" required=true formControlName="taskName"> &nbsp;
+        <button type="submit" class="btn btn-sucess" > Search </button>&nbsp;&nbsp;
+    </form> -->
+    <hr>
+    <table border="1" cellpadding="10" cellspacing="1">
+        <thead>
+            <tr>
+                <th scope="col"> Task Name </th>
+                <th scope="col"> Task Description </th>
+                <th scope="col"> Task Date </th>
+                <th scope="col"> Created By</th>
+                <th scope="col"> Created Ts </th>
+                <th scope="col"> Updated By </th>
+                <th scope="col"> Updated Ts</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let entriesDetails of entriesDetailsList">
+                <td>{{entriesDetails.taskName}}</td>
+                <td>{{entriesDetails.taskDescription}}</td>
+                <td>{{entriesDetails.taskDate}}</td>
+                <td>{{entriesDetails.createdBy}}</td>
+                <td>{{entriesDetails.createdTs}}</td>
+                <td>{{entriesDetails.updatedBy}}</td>
+                <td>{{entriesDetails.updatedTs}}</td>
+               
+            </tr>
+        </tbody>
+    </table>
+</div>

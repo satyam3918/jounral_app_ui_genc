@@ -33,8 +33,8 @@ export class AppComponent implements OnInit {
   }
 
   otherMonthEntries() {
-    this.router.navigateByUrl('getAllCurrentEntriesWithName/' + this.tasksearchForm.value);
-    this.tasksearchForm.reset();
+    this.router.navigateByUrl('getAllMonthEntriesWithMonthName');
+    // this.tasksearchForm.reset();
     // this.appComponentForm.reset();]
   }
 

@@ -13,10 +13,14 @@ import { ToastrService } from 'ngx-toastr';
   })
   export class GetAllCurrentEntries implements OnInit {
 
+    taskName: any ;
     entriesDetailsList: any = [];
+    entriesDetailsListByName: any = [];
+    
     constructor(private router: Router, private httpClient: HttpClient, private apiService: ApiService,
         private route: ActivatedRoute, private toastr: ToastrService) { }
     
+
       ngOnInit() {
     
         return this.apiService.getAllCurrentEntries().subscribe((response: any) => {
@@ -27,14 +31,36 @@ import { ToastrService } from 'ngx-toastr';
         });
       }
 
-    //   tasksearchForm: FormGroup = new FormGroup({
+    //   taskDropdown: FormGroup = new FormGroup({
     //     taskName: new FormControl(null, Validators.required),
     //   });
     
-    //   search() {
-    //     this.router.navigateByUrl('getAllCurrentEntriesWithName/' + this.tasksearchForm.value.taskName);
-    //     // this.tasksearchForm.reset();
-    //     // this.appComponentForm.reset();
-    //   }
+      searchTaskName() {
+        console.log(this.taskName);
+        
+        // this.route.paramMap.subscribe((res: ParamMap) => {
+        //     this.taskName = res.get('taskName');
+        // });
+        // return this.apiService.getAllCurrentTasksWithName(this.taskName).subscribe((response: any) => {
+ 
+        this.entriesDetailsListByName.push(this.taskName);
+
+            return this.entriesDetailsListByName;
+        //   this.taskDetails.taskName = response.taskName;
+        //   this.taskDetails.taskDescription = response.taskDescription;
+        //   this.taskDetails.taskDate = response.taskDate;
+        //   this.taskDetails.createdBy = response.createdBy;
+        //   this.taskDetails.createdTs = response.createdTs;
+        //   this.taskDetails.updatedBy = response.updatedBy;
+        //   this.taskDetails.updatedTs = response.updatedTs;
+
+        
+        
+        
+        // this.router.navigateByUrl('getAllCurrentEntriesWithName/' + this.taskDropdown.value.taskName);
+        // this.tasksearchForm.reset();
+        // this.appComponentForm.reset();
+      }
+    
 
   }

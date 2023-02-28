@@ -1,6 +1,9 @@
 <div align="center">
     <hr>
     <h4>All Entries Details</h4>
+    <select  [(ngModel)]="taskName" >
+        <option [ngValue]=item *ngFor="let item of entriesDetailsList">{{item.taskName|titlecase}}</option>
+    </select>&nbsp;&nbsp;<button type="submit" class="btn btn-sucess" (click)="searchTaskName()"> Search </button>&nbsp;&nbsp;
     <!-- <form name="task-search-form" [formGroup]="tasksearchForm" (ngSubmit)="search()">
         <input type="text" required=true formControlName="taskName"> &nbsp;
         <button type="submit" class="btn btn-sucess" > Search </button>&nbsp;&nbsp;

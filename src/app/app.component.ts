@@ -33,9 +33,9 @@ export class AppComponent implements OnInit {
   }
 
   search() {
-    this.router.navigateByUrl('getAllCurrentEntriesWithName/' + this.tasksearchForm.value.taskName);
-    // this.tasksearchForm.reset();
-    // this.appComponentForm.reset();
+    this.router.navigateByUrl('getAllCurrentEntriesWithName/' + this.tasksearchForm.value);
+    this.tasksearchForm.reset();
+    // this.appComponentForm.reset();]
   }
 
  
